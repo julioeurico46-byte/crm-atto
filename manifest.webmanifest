@@ -1,7 +1,7 @@
 {
   "name": "CRM Atto",
   "short_name": "CRM Atto",
-  "start_url": "./",
+  "start_url": "./?app=1",
   "display": "browser",
   "background_color": "#000000",
   "theme_color": "#000000",
