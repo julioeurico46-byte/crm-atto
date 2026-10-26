@@ -9,13 +9,15 @@
 <meta name="apple-mobile-web-app-title" content="CRM Atto">
 <!-- Lançadora do CRM, que roda no claude.ai e abre apenas para o dono da conta.
      Aberta pelo ícone da tela inicial (?app=1), vai direto para o CRM; aberta pelo link comum, mostra como salvar o ícone.
-     Sem "apple-mobile-web-app-capable": o ícone abre no Safari, onde o login do claude.ai já fica salvo. -->
+     Sem "apple-mobile-web-app-capable": o ícone abre no Safari, onde o login do claude.ai já fica salvo.
+     O app do Claude no iPhone captura links /artifact/*; o fragmento #no_universal_links é excluído
+     no apple-app-site-association do claude.ai, então o link continua no Safari. -->
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
 <script>
-  var CRM='https://claude.ai/artifact/PUPNv89L3bjjNKZM8j5yHc';
+  var CRM='https://claude.ai/artifact/PUPNv89L3bjjNKZM8j5yHc#no_universal_links';
   if(/[?&]app=1\b/.test(location.search))location.replace(CRM);
   else history.replaceState(null,'',location.pathname+'?app=1');
 </script>
@@ -41,7 +43,7 @@
     <li>Escolha <b>Adicionar à Tela de Início</b> e toque em <b>Adicionar</b>.</li>
     <li>Pelo ícone, o CRM abre direto.</li>
   </ol>
-  <a href="https://claude.ai/artifact/PUPNv89L3bjjNKZM8j5yHc">Abrir o CRM agora</a>
+  <a href="https://claude.ai/artifact/PUPNv89L3bjjNKZM8j5yHc#no_universal_links">Abrir o CRM agora</a>
 </main>
 </body>
 </html>
